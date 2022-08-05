@@ -1,0 +1,20 @@
+============================================================================================================================================================================================================
+       ROLE             =>              API                  =>      ENDPOINT                                                                                                     =>   METHOD
+=======================================================================================================================================================================================================
+1]User                  =>   1)getAllCategories          =>  http://localhost:8080/api/articlecategory                                                                            =>  GET
+                             2)getCategoryName           =>  http://localhost:8080/api/articlecategory/search/findByCategoryNameContainsIgnoreCase?name=sport                     =>  GET
+                             3)getAllArticles            =>  http://localhost:8080/api/article                                                                                    =>  GET
+                             4)getArticlesByName         =>  http://localhost:8080/api/article/search/findByArticleTitleContainsIgnoreCase?name=commonwealth                      =>  GET
+                             5)getArticlesByCategoryId   =>  http://localhost:8080/api/article/search/findByCategoryId?id=1                                                       =>  GET
+                             6)addUser                   =>  http://localhost:8080/api/user                                                                                       =>  POST
+                             7)addComment                =>  http://localhost:8080/api/comments                                                                                   =>  POST
+                             8)showMyComments            =>  http://localhost:8080/api/comments/search/findByUserId?id=1                                                          =>  GET
+                             9)deleteMyComment           =>  http://localhost:8080/api/comments                                                                                   =>  DELETE
+                             10)updateMyComment          =>  http://localhost:8080/api/comments/2                                                                                 =>  PATCH   
+
+
+2]Admin                 =>  1)getAllUsers                =>  http://localhost:8080/api/user                                                                                       =>  GET
+                            2)getAllComments             =>  http://localhost:8080/api/comments                                                                                   =>  GET
+                            3)deleteCommentByCommentId   =>  http://localhost:8080/api/comments/1                                                                              =>  DELETE                                                                            
+                   
+       
