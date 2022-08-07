@@ -1,0 +1,21 @@
+<a href="{{article.articleLink}}">
+    <img src="{{article.imageURL}}" height="200px" width="100%" class="card-img-top"></a>
+<div class="card-body">
+    <b> <a class="nav-link" href="{{article.articleLink}}">
+            {{article.articleTitle}}
+        </a> </b>
+    <p class="card-text">{{article.description}}</p>
+    <!-- <button class="btn btn-info" style="padding-right: 50px;" (click)="addLike()">Like<span>{{article.likesCount}}</span></button> -->
+    <div *ngIf="isUserLoggedIn()">
+        <a class="btn btn-primary" (click)="addLike()" role="button">Like <span>{{articleLike}}</span></a><br>
+
+        <div class="form-group">
+            <br>
+            <!-- <input type="text" class="form-control" placeholder="Add Comment" name="description" [(ngModel)]="comment.description" required="required">-->
+            <input type="text" placeholder="Add Comment" name="description" [(ngModel)]="comment.description"
+                required="required"><input type="submit" (click)="addComment()">
+        </div>
+    </div>
+   
+    <!-- <button class="btn btn-info" style="padding-right: 50px;" (click)="addComment()">Comment</button> -->
+</div>

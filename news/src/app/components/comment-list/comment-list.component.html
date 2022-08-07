@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h2>Comment-List</h2>
+    <table class="table table-bordered table-hover table-primary">
+        <thead class="table-dark">
+            <tr>
+                <th>CommentId</th>
+                <th>Description</th>
+                <th>ArticleId</th>
+                <th>UserId</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr  *ngFor="let com of comments">
+            <td>{{com.commentId }} </td>
+            <td>{{com.description}}</td>
+            <td>{{com.articleId }}</td>
+            <td>{{com.userId}}</td>
+             <!-- <td> <button type="submit" class="btn btn-warning" (click)="updateComment(com.commentId)">Update</button></td> --> 
+             <button type="submit" class="btn btn-danger" (click)="deleteComment(com.commentId)">Delete</button>
+        </tr> 
+        </table>
+         </div>

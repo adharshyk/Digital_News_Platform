@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <h2>User-list</h2>
+    <table class="table table-bordered table-hover table-info ">
+        <thead class="table-dark">
+            <tr  >
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Email-Id</th>
+                <th>Mobile no</th>
+                <th>City</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr  class="table-primary" style="text-emphasis-color:dark ;" *ngFor="let user of users">
+            <td>{{user.userId }} </td>
+            <td>{{user.name}}</td>
+            <td>{{user.email }}</td>
+            <td>{{user.mobileNumber}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.dob}}</td>
+            <!-- <td> <button type="submit" class="btn btn-warning" (click)="updateProduct(prod.id)">Update</button></td> -->
+             <button type="submit" class="btn btn-danger"  (click)="deleteUser(user.userId)">Delete</button>
+        </tr>
+        </table>
+         </div>

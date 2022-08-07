@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<html>
+    <body>
+        <div class="container-fluid">
+            <button class="au-btn-submit btn-warning" (click)="addArticle()">Add New Article</button>
+            <h2>Article-List</h2>
+            <style>
+                table, th, td {
+                  border:1px solid black;
+                  border-collapse: collapse;
+                  
+                }
+                </style>
+            <table>
+                <thead class="table-dark">
+                    <tr>
+                        <th>ArticleId</th>
+                        <th>Article Title</th>
+                        <th>Image url</th>
+                        <th>Description</th>
+                        <!-- <th style="width:20%">Article Link</th> -->
+                        <th>Category Id</th>
+                        <th>Likes</th>
+                        <th>Comments</th>
+                        <th>Action</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr  *ngFor="let art of articles">
+                    <td>{{art.articleId }} </td>
+                    <td>{{art.articleTitle}}</td>
+                    <td><img src="{{art.imageURL}}" alt="#" height="50px"></td>
+                    <td>{{art.description }} </td>
+                    <!-- <td>{{art.articleLink }}</td> -->
+                    <td>{{art.categoryId}}</td>
+                    <td>{{art.likesCount}}</td>
+                    <td>{{art.commentCount}}</td>
+                    <td><button type="submit" class="btn btn-warning" (click)="updateArticle(art.articleId)">Update</button></td>
+                   <td><button type="submit" class="btn btn-danger" (click)="deleteArticle(art.articleId)">Delete</button></td>
+                </tr> 
+                </table>
+                 </div>
+        
+    </body>
+</html>

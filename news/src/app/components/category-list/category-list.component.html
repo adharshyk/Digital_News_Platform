@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <button class="au-btn-submit btn-warning" (click)="addCategory()">Add New Category</button>
+    <h2>Category-list</h2>
+    <table class="table table-bordered table-hover table-primary ">
+        <thead class="table-dark">
+            <tr>
+                <th>CategoryId</th>
+                <th>Category Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr  *ngFor="let cat of categories">
+            <td>{{cat.categoryId }} </td>
+            <td>{{cat.categoryName}}</td>
+             <button type="submit" class="btn btn-warning"  (click)="updateCategory(cat.categoryId)">Update</button>
+             <button type="submit" class="btn btn-dark" (click)="deleteCategory(cat.categoryId)" >Delete</button>
+        </tr>
+        </table>
+         </div>
+
+         

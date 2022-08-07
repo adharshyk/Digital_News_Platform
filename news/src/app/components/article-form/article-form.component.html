@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<app-navbar></app-navbar>
+<body>
+  <div class="container">
+    <div class="title">Article</div>
+    <div class="content">
+      <form #articleform="ngForm" (ngSubmit)="onSubmit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Artcle Title</span>
+            <input type="text" [(ngModel)] = "article.articleTitle" [ngModelOptions]="{standalone: true}" >
+          </div>
+          <div class="input-box">
+            <span class="details">Image url</span>
+            <input type="text"  [(ngModel)] = "article.imageURL" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="input-box">
+            <span class="details">Description</span>
+            <input type="text" [(ngModel)] = "article.description" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="input-box">
+            <span class="details">Article Link</span>
+            <input type="text"  [(ngModel)] = "article.articleLink" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="input-box">
+            <span class="details">Category Id</span>
+            <input type="text" [(ngModel)] = "article.categoryId" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="input-box">
+            <span class="details">Likes Count</span>
+            <input type="text" [(ngModel)] = "article.likesCount" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="input-box">
+            <span class="details">Comments count</span>
+            <input type="text" [(ngModel)] = "article.commentCount" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit"name="submit" value="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

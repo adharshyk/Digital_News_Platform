@@ -1,0 +1,157 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="margin-top: 10px; ">
+  <div class="container-fluid">
+    <a style="color:aliceblue;" class="navbar-brand" href="#">Digital News</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="color:aliceblue;" class="nav-link active" aria-current="page" href=" ">Home</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:aliceblue;" class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:aliceblue;" class="nav-link" href="https://www.businessnews.com.au/Category/Government">Politics</a>
+        </li>
+      </ul>
+      <ul class = "navbar-nav ">
+      <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="onLogout()">Logout</button>
+       </ul>
+    </div>
+  </div>
+</nav>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+        <a > <img src="assets/Entertainment.jpe" height="200px" width="100%"
+                class="card-img-top"></a>
+        <div class="card-body">
+            <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a> -->
+            <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="entertainmentPage()">Entertainment</button>
+              &nbsp; &nbsp;&nbsp;
+            
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sub-Categories
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="https://screenrant.com/movie-news/">Music</a></li>
+                <li><a class="dropdown-item" href="https://www.rollingstone.com/music/music-news/">Movies</a></li>
+                <li><a class="dropdown-item" href="https://www.hollywoodreporter.com/c/tv/tv-news/">Tv-Series</a></li>
+              </ul>
+            
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
+        </div>
+    </div>
+</div>
+  <div class="col">
+      <div class="card">
+          <a > <img src="assets/Sports1.jpg" height="200px" width="100%"
+                  class="card-img-top"></a>
+          <div class="card-body">
+              <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a> -->
+              <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="sportsPage()">Sports</button>
+                &nbsp; &nbsp;&nbsp;
+              
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sub-Categories
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="https://m.cricbuzz.com/cricket-news/latest-news">Cricket</a></li>
+                  <li><a class="dropdown-item" href="https://www.skysports.com/football/news">Football</a></li>
+                  <li><a class="dropdown-item" href="https://wrestlingnews.co/">Wrestling</a></li>
+                </ul>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card">
+          <a href="https://www.businessnews.com.au/Category/Government"> <img src="assets/Politics.jpe" height="200px" width="100%" class="card-img-top"></a>
+          <div class="card-body">
+              <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Government">Politics</a> -->
+              <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="politicsPage()">Politics</button>
+                &nbsp; &nbsp;&nbsp;
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sub-Categories
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="https://www.bhaskar.com/local/mp/indore/">Local Politcs</a></li>
+                  <li><a class="dropdown-item" href="https://timesofindia.indiatimes.com/politics/news">Indian Politics</a></li>
+                  <li><a class="dropdown-item" href="https://www.cnbc.com/world-politics/">World Politics</a></li>
+                </ul>
+              
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+    <div class="card">
+        <a > <img src="assets/Science.jpe" height="200px" width="100%"
+                class="card-img-top"></a>
+        <div class="card-body">
+            <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a> -->
+            <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="sciencePage()">Science</button>
+              &nbsp; &nbsp;&nbsp;
+            
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sub-Categories
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="https://www.sciencenews.org/">Science</a></li>
+                <li><a class="dropdown-item" href="https://https://techbullion.com/healthtech/">HealthTech</a></li>
+                <li><a class="dropdown-item" href="https://techbullion.com/tech-news/">Technology</a></li>
+              </ul>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
+        </div>
+    </div>
+</div>
+<div class="col">
+  <div class="card">
+      <a > <img src="assets/World News.jpg" height="200px" width="100%"
+              class="card-img-top"></a>
+      <div class="card-body">
+          <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a> -->
+          <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="indigenousPage()">Indigenous</button>
+            &nbsp; &nbsp;&nbsp;
+          
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Sub-Categories
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="https://theprint.in/health/">Food</a></li>
+              <li><a class="dropdown-item" href="https://indianexpress.com/section/trending/trending-globally/">Viral</a></li>
+              <li><a class="dropdown-item" href="https://www.vogue.com/fashion">Fashion</a></li>
+            </ul>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+      </div>
+  </div>
+</div>
+<div class="col">
+<div class="card">
+    <a > <img src="assets/Business 1.jpe" height="200px" width="100%"
+            class="card-img-top"></a>
+    <div class="card-body">
+        <!-- <a class="nav-link" href="https://www.businessnews.com.au/Category/Sport">Sports</a> -->
+        <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"(click)="financialPage()">Financial Services</button>
+          &nbsp; &nbsp;&nbsp;
+        
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Sub-Categories
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="https://economictimes.indiatimes.com/markets">Stock Exchange</a></li>
+            <li><a class="dropdown-item" href="https://www.cnbc.com/world/">World Finances</a></li>
+            <li><a class="dropdown-item" href="https://www.worldbank.org/en/news">World Bank</a></li>
+          </ul>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.</p>
+    </div>
+</div>
+</div>

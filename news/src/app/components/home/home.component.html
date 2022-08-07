@@ -1,0 +1,151 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="margin-top: 10px; ">
+    <div class="container-fluid">
+        <a style="color:aliceblue;" class="navbar-brand" href="#">Talentsprint's Digital News Platform</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a style="color:aliceblue;" class="nav-link active" aria-current="page" href="/userwelcome">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:aliceblue;" class="nav-link"
+                        href="https://www.businessnews.com.au/Category/Sport">Sports</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:aliceblue;" class="nav-link"
+                        href="https://www.businessnews.com.au/Category/Government">Politics</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:aliceblue;" class="nav-link"
+                        href="https://www.businessnews.com.au/Category/Community-Arts">Art & Community</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ">
+                <button style="color:aliceblue;" class="btn btn-info" style="padding-right: 50px; text-align: center;"
+                    (click)="userWelcomePage()">Login</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 15px;">
+
+    <div *ngFor="let article of articleList">
+        <div class="col">
+            <app-articleitem class="newsitem card" [article]="article"></app-articleitem>
+        </div>
+    </div>
+</div>
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 15px;">
+    <div class="col">
+        <div class="card">
+            <a
+                href="https://www.republicworld.com/entertainment-news/movie-reviews/rocketry-the-nambi-effect-review-r-madhavan-shines-in-untold-story-of-nambi-narayanan-articleshow.html">
+                <img src="assets/Nambi.webp" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="https://www.republicworld.com/entertainment-news/movie-reviews/rocketry-the-nambi-effect-review-r-madhavan-shines-in-untold-story-of-nambi-narayanan-articleshow.html">
+                    Rocketry: The Nambi Effect' Review
+                </a>
+                <p class="card-text">Rocketry: The Nambi Effect' Review The biographical drama, also directed by
+                    R Madhavan, is all about the life of Dr Nambi Narayanan, who was instrumental in developing the
+                    Vikas engine and is also a Padma Bhushan awardee.</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="addLike()">Like</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Add Comment" name="description" [(ngModel)]="comment.description"
+                        required="required">
+                </div>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="addComment()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <a href="https://sports.ndtv.com/commonwealth-games-2022/commonwealth-games-day-8-3227108"> <img
+                    src="assets/Wrestling.webp" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="https://sports.ndtv.com/commonwealth-games-2022/commonwealth-games-day-8-3227108">Bajrang,
+                    Sakshi And Deepak Win Wrestling Golds </a>
+                <p class="card-text">Indian wrestlers Bajrang Punia (men's 65kg), Sakshi Malik (women's 62kg) and Deepak
+                    Punia (men's 86kg) have won gold on Friday. Anshu Malik (women's 57kg) won a silver medal.</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Like</button>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <a
+                href="https://indianexpress.com/article/political-pulse/dhankhar-set-to-be-elected-as-vice-president-numbers-against-alva-8073069/">
+                <img src="assets/VicePresident.jpg" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="https://indianexpress.com/article/political-pulse/dhankhar-set-to-be-elected-as-vice-president-numbers-against-alva-8073069/">Dhankhar
+                    set to be elected as Vice-President</a>
+                <p class="card-text">The numbers in the Vice-Presidential poll are stacked heavily in favour of Dhankhar
+                    and it is to be seen whether the Opposition will be hit again by cross-voting like what was
+                    witnessed in the Presidential election last month.</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Like</button>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <a
+                href="http://timesofindia.indiatimes.com/articleshow/93313181.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst">
+                <img src="assets/Spicejet.jpg" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="http://timesofindia.indiatimes.com/articleshow/93313181.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst">SpiceJet
+                    in talks with Indian company
+                </a>
+                <p class="card-text">Cash -Strapped Spicejet promoter Ajay Singh is in talks with multiple players
+                    including middle eastern Carrier and a big Indian conglomerate for stake
+                    sale to raise funds for the struggling to survive budget airline which urgently requires
+                    recapitalisation to keep flying</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Like</button>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <a href="https://www.businessnews.com.au/article/Inaugural-indigenous-employment-index-launches"> <img
+                    src="assets/Australia.jpg" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="https://www.businessnews.com.au/article/Inaugural-indigenous-employment-index-launches">Inaugral
+                    indigenous emplyment index launches</a>
+                <p class="card-text">A cohort of WA's largest organisations have participated in a first-og-its-kind
+                    report profiling indigenous employment practices in Australia. This is a longer card with supporting
+                    text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Like</button>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <a
+                href="https://www.indiatoday.in/science/story/jupiter-glows-in-latest-picture-captured-by-james-webb-telescope-1982282-2022-08-01">
+                <img src="assets/jupiter.webp" height="200px" width="100%" class="card-img-top"></a>
+            <div class="card-body">
+                <a class="nav-link"
+                    href="https://www.indiatoday.in/science/story/jupiter-glows-in-latest-picture-captured-by-james-webb-telescope-1982282-2022-08-01">Jupiter
+                    glows in latest picture</a>
+                <p class="card-text">Weeks after the James Webb Telescope beamed back the first exceptional science
+                    images from the edge of time itself,
+                    the observatory is busy studying planets in our own solar system. Astronomers have released another
+                    image of Jupiter as captured by the world's most powerful telescope.</p>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Like</button>
+                <button class="btn btn-info" style="padding-right: 50px;" (click)="userWelcomePage()">Comment</button>
+            </div>
+        </div>
+    </div>
+
+</div>  -->
